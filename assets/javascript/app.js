@@ -92,12 +92,15 @@ var questions = [
     }
     
     $("body").on("click", ".startButton", function(event){
-        event.preventDefault();  
-        startGame()
+        console.log('this is hit');
+      
         run();
+        startGame()
         $("#wrapper").show();
         $("#instructions").hide();
         $(".startButton").hide();
+        loadQuestion(currentQuestion);
+
     });
     
     
@@ -122,7 +125,7 @@ var questions = [
         var answer = selectedOptions.value;
         if(questions[currentQuestion].answer == answer) {
             score++;
-        } else if (questions[currentQuestion].answer !== answer) {
+        } else  {
             incorrect++
         }
         selectedOptions.checked=false;
@@ -140,8 +143,7 @@ var questions = [
         }
         loadQuestion(currentQuestion);
     }
-    // startGame();
-    loadQuestion(currentQuestion);
+    
     
     function endGame() {
         $("#quizContainer").hide();
@@ -154,9 +156,10 @@ var questions = [
     var intervalId;
     
     function run() {
+         $("#timer").html("<h2>You have " + number + " seconds left</h2>");
           clearInterval(intervalId);
           intervalId = setInterval(decrement, 1000);
-        }
+    }
     
     function decrement() {
           number--;
@@ -170,9 +173,12 @@ var questions = [
               endGame();
     
           }
-        }
+    }
     
-        function stop() {
+    function stop() {
           clearInterval(intervalId);
-        }
+    }
+    
+
+
     
