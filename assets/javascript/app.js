@@ -88,7 +88,7 @@ var questions = [
     var totQuestions = questions.length;
     
     function startGame () {
-        number = 30;
+        number = 45;
     }
     
     $("body").on("click", ".startButton", function(event){
@@ -124,10 +124,12 @@ var questions = [
         var answer = selectedOptions.value;
         if(questions[currentQuestion].answer == answer) {
             score++;
-            // $("#correctAnswer").text("Correct")
+            alert("Correct!")
+            
         } else  {
             incorrect++
-            // $("#correctAnswer").text("Incorrect")
+            alert("Incorrect!")
+
 
         }
         selectedOptions.checked=false;
@@ -143,7 +145,7 @@ var questions = [
             $("#correct").text("Correct Answers: " + score);
             $("#incorrect").text("Incorrect Answers: " + incorrect);
             var unanswered = 10 - (score + incorrect);
-            $("#unanswered").text("Not Answered :" + (unanswered));
+            $("#unanswered").text("Not Answered: " + (unanswered));
             console.log(questionCount)
 
 
@@ -170,7 +172,7 @@ var questions = [
         return;
     }
     
-    var number = 30;
+    var number = 45;
     var intervalId;
     
     function run() {
