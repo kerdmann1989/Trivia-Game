@@ -1,34 +1,33 @@
 header {
     background-color: #eeeeee;
-
 }
 
 .startButton {
     background-color: red;
     width: 200px;
 }
+
 .container {
     margin-top: 100px;
     height: 500px;
     border-radius: 50px;
     margin-left: 50px;
-   
-
 }
 
 /* .quizContainer {
     margin-top: 300px;
 
 } */
+
 body {
     background-image: url(../images/mickey.jpg);
     background-size: cover;
 }
+
 #wrapper {
-    
-        display : none;
-    
+    display : none;
 }
+
 /* section {
     width: 960px;
 
@@ -41,40 +40,58 @@ body {
 } */
 
 h1 {
-    font-family: 'Shadows Into Light', cursive;
-    background-color: black;
-    font-size: 60px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 80px;
     color: #fff;
     border-radius: 50px;
-
-
 }
 
 #result {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Quicksand', sans-serif;
     font-size: 90px;
     color: #fff;
     padding: 2px 0px;
-    width: 800px;
-   
+    width: 800px;  
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
+/* #correctAnswer {
+    font-family: 'Quicksand', sans-serif;
+    color: green;
+    font-size: 20px;
+
+}
+
+#incorrectAnswer {
+font-family: 'Quicksand', sans-serif;
+color: purple;
+font-size: 20px;
+} */
+
+
+#correct, #incorrect, #unanswered {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 70px;
+    color: #fff;
+    padding: 2px 0px;
+    width: 800px;
+    margin-left: 50px;
+}
 
 #question {
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
     color: #5a5772;
-    border-radius: 50px;
-
-
+    border-radius: 20px;
 }
 
 label {
-    font-family: 'Shadows Into Light', cursive;
-
+    font-family: 'Quicksand', sans-serif;
 }
+
 .option {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Quicksand', sans-serif;
     line-height: 50px;
     color: white;
     font-family: sans-serif;
@@ -84,26 +101,26 @@ label {
 
 #instructions{
     color: white;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 100;
     font-size: 40px;
 }
 
 #timer {
     color: white;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 100;
     font-size: 25px;
 }
+
 #question {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Quicksand', sans-serif;
     font-size: 40px;
     color: red;
     line-height: 50px;
     background-color: #333;
     padding: 10px;
     width: 100%;
-
 }
 
 .buttons {
@@ -111,14 +128,14 @@ label {
 }
 
 .next-btn {
-background-color: #778897;
-width: 250px;
-font-size: 20px;
-color: #fff;
-border: 1px solid #1d3c6a;
-border-radius: 50px;
-margin: 10px 40px 10px 0px;
-padding: 10px 10px;
+    background-color: #778897;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 20px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
 }
 
 #progress {
@@ -126,16 +143,6 @@ padding: 10px 10px;
     font-size: 18px;
 }
 
-#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
-    cursor: pointer;
-    background-color: #57636e;
-}
-
-#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
-    outline: 0;
-}
-
 #opt1, #opt2, #opt3, #opt4 {
-    font-family: 'Shadows Into Light', cursive;
-
+    font-family: 'Quicksand', sans-serif;
 }

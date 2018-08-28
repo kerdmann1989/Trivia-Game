@@ -16,7 +16,7 @@ var questions = [
         answer: 1
     },
     {
-        question: "What is the name of Merlin's pet Owl in 'The Sword in the Stone'?",
+        question: "What is the name of the owl in 'The Sword in the Stone'?",
         option1: "Aristotle",
         option2: "Socrates",
         option3: "Archimedes",
@@ -56,7 +56,7 @@ var questions = [
         answer: 3
     },
     {
-        question: "Which of the following is not one of the good faires from Sleeping Beauty?",
+        question: "Which of the following is NOT one of the fairies from Sleeping Beauty?",
         option1: "Flora",
         option2: "Fauna",
         option3: "Merryweather",
@@ -113,7 +113,6 @@ var questions = [
         $("#opt3").text(q.option3);
         $("#opt4").text(q.option4);
         $("#image").html(q.image);
-    console.log(q.image)
     };
     
     function loadNextQuestion () {
@@ -125,8 +124,11 @@ var questions = [
         var answer = selectedOptions.value;
         if(questions[currentQuestion].answer == answer) {
             score++;
+            // $("#correctAnswer").text("Correct")
         } else  {
             incorrect++
+            // $("#correctAnswer").text("Incorrect")
+
         }
         selectedOptions.checked=false;
         currentQuestion++;
@@ -137,18 +139,34 @@ var questions = [
         if(currentQuestion == totQuestions) {  
             $("#quizContainer").hide();
             stop();
-            $("#result").text("You got " + score + " correct " + "and " + incorrect + " incorrect.")
+            $("#result").text("You're Score")
+            $("#correct").text("Correct Answers: " + score);
+            $("#incorrect").text("Incorrect Answers: " + incorrect);
+            var unanswered = 10 - (score + incorrect);
+            $("#unanswered").text("Not Answered :" + (unanswered));
+            console.log(questionCount)
+
+
             return;
         
         }
         loadQuestion(currentQuestion);
     }
     
-    
+    var questionCount = 10;
     function endGame() {
         $("#quizContainer").hide();
         stop();
-        $("#result").text("You got " + score + " correct " + "and " + incorrect + " incorrect.")
+        $("#result").text("You're Score")
+
+       // $("#result").text("You got " + score + " correct " + "and " + incorrect + " incorrect.")
+        $("#correct").text("Correct Answers: " + score);
+        $("#incorrect").text("Incorrect Answers: " + incorrect);
+        var unanswered = 10 - (score + incorrect);
+        console.log(unanswered);
+        $("#unanswered").text("Not Answered :" + (unanswered));
+        
+
         return;
     }
     
